@@ -3,6 +3,7 @@
   "license": "BSD-3-Clause",
   "version": "0.8.0",
   "description": "This element is used to decorate contents as material ink.",
+  "homepage": "http://www.expandjs.com/elements/mat-ink",
   "authors": [
     "Giuliano Rullo <g.rullo@expandjs.com>",
     "Maurizio Stefàno <m.stefano@expandjs.com>",
