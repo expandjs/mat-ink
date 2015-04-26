@@ -46,47 +46,43 @@ This element is used to decorate contents as material ink.
             /* OPACITY */
 
             :host([opacity="divider"][foreground="dark"]) {
-                opacity: 0.14;
+                color: hsla(0, 0%, 0%, 0.12);
             }
 
             :host([opacity="divider"][foreground="light"]) {
-                opacity: 0.12;
+                color: hsla(0, 0%, 100%, 0.12);
             }
 
             :host([opacity="hint"][foreground="dark"]) {
-                opacity: 0.44;
+                color: hsla(0, 0%, 0%, 0.26);
             }
 
             :host([opacity="hint"][foreground="light"]) {
-                opacity: 0.30;
+                color: hsla(0, 0%, 100%, 0.30);
             }
 
             :host([opacity="icon"][foreground="dark"]) {
-                opacity: 0.62;
+                color: hsla(0, 0%, 0%, 0.54);
             }
 
             :host([opacity="icon"][foreground="light"]) {
-                opacity: 1;
+                color: hsla(0, 0%, 100%, 1);
             }
 
             :host([opacity="ripple"][foreground="dark"]) {
-                opacity: 0.28;
+                color: hsla(0, 0%, 0%, 0.24);
             }
 
             :host([opacity="ripple"][foreground="light"]) {
-                opacity: 0.24;
+                color: hsla(0, 0%, 100%, 0.24);
             }
 
             :host([opacity="secondary"][foreground="dark"]) {
-                opacity: 0.62;
+                color: hsla(0, 0%, 0%, 0.54);
             }
 
             :host([opacity="secondary"][foreground="light"]) {
-                opacity: 0.70;
-            }
-
-            :host([color]:not([color=""])) {
-                opacity: 1;
+                color: hsla(0, 0%, 100%, 0.70);
             }
 
             /* DISABLED */
@@ -100,12 +96,10 @@ This element is used to decorate contents as material ink.
 
             :host([disabled][foreground="dark"]) {
                 color: hsla(0, 0%, 0%, 0.26) !important;
-                opacity: 1 !important;
             }
 
             :host([disabled][foreground="light"]) {
                 color: hsla(0, 0%, 100%, 0.30) !important;
-                opacity: 1 !important;
             }
         </style>
         <template context="{{}}" is="xp-slave-state" master="{{layer}}" masterTag="mat-paper"></template>
