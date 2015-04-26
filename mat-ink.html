@@ -107,14 +107,6 @@ This element is used to decorate contents as material ink.
                 color: hsla(0, 0%, 100%, 0.30) !important;
                 opacity: 1 !important;
             }
-
-            :host([disabled][opacity="icon"][foreground="dark"]) {
-                opacity: 0.30 !important;
-            }
-
-            :host([disabled][opacity="icon"][foreground="light"]) {
-                opacity: 0.30 !important;
-            }
         </style>
         <template context="{{}}" is="xp-slave-state" master="{{layer}}" masterTag="mat-paper"></template>
         <mat-palette id="matInkPalette"></mat-palette>
