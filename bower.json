@@ -1,7 +1,7 @@
 {
   "name": "mat-ink",
   "license": "BSD-3-Clause",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "This element is used to decorate contents as material ink.",
   "homepage": "http://www.expandjs.com/elements/mat-ink",
   "authors": [
