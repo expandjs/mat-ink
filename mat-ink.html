@@ -71,14 +71,6 @@ This element is used to decorate contents as material ink.
                 color: hsla(0, 0%, 100%, 1);
             }
 
-            :host([opacity="ripple"][foreground="dark"]) {
-                color: hsla(0, 0%, 0%, 0.24);
-            }
-
-            :host([opacity="ripple"][foreground="light"]) {
-                color: hsla(0, 0%, 100%, 0.24);
-            }
-
             :host([opacity="secondary"][foreground="dark"]) {
                 color: hsla(0, 0%, 0%, 0.54);
             }
@@ -222,10 +214,10 @@ This element is used to decorate contents as material ink.
              *
              * @property opacityList
              * @type Array
-             * @default ["divider", "hint", "icon", "ripple", "secondary"]
+             * @default ["divider", "hint", "icon", "secondary"]
              * @readonly
              */
-            opacityList: ['divider', 'hint', 'icon', 'ripple', 'secondary']
+            opacityList: ['divider', 'hint', 'icon', 'secondary']
         });
     </script>
 
