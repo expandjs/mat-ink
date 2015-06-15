@@ -24,9 +24,9 @@
     "**/.*"
   ],
   "dependencies": {
-    "expandjs": "ExpandJS/expandjs#alpha",
-    "mat-palette": "ExpandJS/mat-palette#alpha",
-    "xp-slave-state": "ExpandJS/xp-slave-state#alpha",
+    "expandjs": "ExpandJS/expandjs",
+    "mat-palette": "ExpandJS/mat-palette",
+    "xp-slave-state": "ExpandJS/xp-slave-state",
     "polymer": "Polymer/polymer#^0.5"
   }
 }
