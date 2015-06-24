@@ -28,6 +28,6 @@
     "mat-palette": "ExpandJS/mat-palette#0.9.1",
     "mat-typography": "ExpandJS/mat-typography#0.9.1",
     "xp-slave-state": "ExpandJS/xp-slave-state#0.9.1",
-    "polymer": "Polymer/polymer#^1.0.4"
+    "polymer": "Polymer/polymer#^1.0.0"
   }
 }
