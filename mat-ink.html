@@ -26,6 +26,7 @@ This element is used to decorate contents as material ink.
 <link rel="import" href="../expandjs/expandjs.html">
 <link rel="import" href="../mat-palette/mat-palette.html">
 <link rel="import" href="../mat-typography/mat-typography.html">
+<link rel="import" href="../xp-shared-behavior/xp-shared-behavior.html">
 <link rel="import" href="../xp-slave-state/xp-slave-state.html">
 
 <dom-module id="mat-ink">
@@ -83,7 +84,8 @@ This element is used to decorate contents as material ink.
 
             // BEHAVIORS
             behaviors: [
-                Polymer.MatPalette
+                Polymer.MatPalette,
+                Polymer.XPSharedBehavior
             ],
 
             /*********************************************************************/
@@ -148,8 +150,7 @@ This element is used to decorate contents as material ink.
                     notify: true,
                     readOnly: true,
                     reflectToAttribute: true,
-                    type: String,
-                    value: function () { return this._getForeground(); }
+                    type: String
                 },
 
                 /**
@@ -191,8 +192,15 @@ This element is used to decorate contents as material ink.
             /*********************************************************************/
 
             // OBSERVER
-            _layerChanged: function (post) {
-                if (post && arguments.length > 1) { this._setForeground(post.foreground); }
+            _layerChanged: function () {
+                if (this.layer) { this._setForeground(this.layer.foreground); }
+            },
+
+            /*********************************************************************/
+
+            // LISTENER
+            ready: function () {
+                this._setForeground(this._getForeground(this.shared && this.shared.theme));
             }
         });
     </script>
