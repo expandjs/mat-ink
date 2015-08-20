@@ -2,6 +2,7 @@
   "name": "mat-ink",
   "license": "BSD-3-Clause",
   "version": "0.9.6",
+  "main": "mat-ink.html",
   "description": "A custom element used to decorate content as Material Design ink",
   "homepage": "http://expandjs.com/elements/mat-ink",
   "authors": [
@@ -16,9 +17,6 @@
     "html5",
     "expandjs",
     "web-components"
-  ],
-  "main": [
-    "mat-ink.html"
   ],
   "ignore": [
     "**/.*"
