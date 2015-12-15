@@ -90,10 +90,25 @@ A behavior used to implement [Material Design ink](http://www.google.com/design/
              * @readonly
              */
             foreground: {
+                computed: '_computeForeground(paper.foreground)',
                 notify: true,
-                readOnly: true,
                 reflectToAttribute: true,
                 type: String
+            },
+
+            /**
+             * If set to true, the element is hidden.
+             *
+             * @attribute hidden
+             * @type boolean
+             * @default false
+             * @notifies
+             */
+            hidden: {
+                notify: true,
+                reflectToAttribute: true,
+                type: Boolean,
+                value: false
             },
 
             /**
@@ -106,7 +121,6 @@ A behavior used to implement [Material Design ink](http://www.google.com/design/
              */
             paper: {
                 notify: true,
-                observer: '_paperObserver',
                 readOnly: true
             },
 
@@ -134,6 +148,13 @@ A behavior used to implement [Material Design ink](http://www.google.com/design/
 
         /*********************************************************************/
 
+        // COMPUTER
+        _computeForeground: function () {
+            return !!this.paper && this.paper.foreground;
+        },
+
+        /*********************************************************************/
+
         // OBSERVER
         _colorObserver: function () {
 
@@ -148,13 +169,6 @@ A behavior used to implement [Material Design ink](http://www.google.com/design/
             this.style.color = this._computeRGB(this.currentColor, this.disabled) || '';
         },
 
-        // OBSERVER
-        _paperObserver: function () {
-
-            // Setting
-            if (this.paper) { this._setForeground(this.paper.foreground); }
-        },
-
         /*********************************************************************/
 
         // LISTENER
@@ -167,14 +181,8 @@ A behavior used to implement [Material Design ink](http://www.google.com/design/
         // LISTENER
         ready: function () {
 
-            // Vars
-            var self = this;
-
             // Mapping
-            self.mastersMap.paper = '.paper';
-
-            // Setting
-            self._setForeground(self.foreground || 'dark');
+            this.mastersMap.paper = '.paper';
         }
     };
 
