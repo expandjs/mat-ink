@@ -58,11 +58,9 @@ A behavior used to implement [Material Design ink](http://www.google.com/design/
              *
              * @attribute current-color
              * @type string
-             * @notifies
              * @readonly
              */
             currentColor: {
-                notify: true,
                 readOnly: true,
                 reflectToAttribute: true,
                 type: String
@@ -86,14 +84,14 @@ A behavior used to implement [Material Design ink](http://www.google.com/design/
              *
              * @attribute foreground
              * @type "dark" | "light"
-             * @notifies
+             * @default "dark"
              * @readonly
              */
             foreground: {
                 computed: '_computeForeground(paper.foreground)',
-                notify: true,
                 reflectToAttribute: true,
-                type: String
+                type: String,
+                value: "dark"
             },
 
             /**
@@ -116,11 +114,9 @@ A behavior used to implement [Material Design ink](http://www.google.com/design/
              *
              * @attribute paper
              * @type Element
-             * @notifies
              * @readonly
              */
             paper: {
-                notify: true,
                 readOnly: true
             },
 
