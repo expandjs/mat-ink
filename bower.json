@@ -23,6 +23,7 @@
   "dependencies": {
     "expandjs": "ExpandJS/expandjs#0.10.0",
     "mat-palette": "ExpandJS/mat-palette#0.10.0",
+    "mat-typography": "ExpandJS/mat-typography#0.10.0",
     "xp-slave-behavior": "ExpandJS/xp-slave-behavior#0.10.0",
     "polymer": "Polymer/polymer#^1.2.0"
   }
