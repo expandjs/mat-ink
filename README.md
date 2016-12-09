@@ -1,3 +1,3 @@
 # mat-ink
 
-See the [`documentation page`](http://expandjs.com/elements/mat-ink) for more information.
+This repository has been merged into [`mat-elements`](https://github.com/expandjs/mat-elements).
